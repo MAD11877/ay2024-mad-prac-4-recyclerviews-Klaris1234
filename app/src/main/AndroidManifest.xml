@@ -24,7 +24,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <!-- No intent filter here, as it's no longer the launcher activity -->
         </activity>
     </application>
 
