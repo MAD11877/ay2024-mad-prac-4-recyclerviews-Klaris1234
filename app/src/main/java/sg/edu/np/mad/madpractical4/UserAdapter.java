@@ -13,20 +13,20 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
-    private ArrayList<User> userList;
+    private ArrayList<User> UserList;
     private ListActivity activity;
 
     private static final int VIEW_TYPE_REGULAR = 0;
     private static final int VIEW_TYPE_SPECIAL = 1;
 
     public UserAdapter(ArrayList<User> userList, ListActivity activity) {
-        this.userList = userList;
+        this.UserList = userList;
         this.activity = activity;
     }
 
     @Override
     public int getItemViewType(int position) {
-        User user = userList.get(position);
+        User user = UserList.get(position);
         if (user.getName().endsWith("7")) {
             return VIEW_TYPE_SPECIAL;
         } else {
@@ -43,7 +43,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
 
     @Override
     public void onBindViewHolder(UserViewHolder holder, int position) {
-        User user = userList.get(position);
+        User user = UserList.get(position);
 
         holder.name.setText(user.getName());
         holder.description.setText(user.getDescription());
@@ -89,6 +89,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
 
     @Override
     public int getItemCount() {
-        return userList.size();
+        return UserList.size();
     }
 }
