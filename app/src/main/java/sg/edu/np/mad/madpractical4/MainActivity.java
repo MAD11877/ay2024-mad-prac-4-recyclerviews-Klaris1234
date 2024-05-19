@@ -35,17 +35,17 @@ public class MainActivity extends AppCompatActivity {
         // Set the TextViews with the User's name, description and default button message
         tvName.setText(user.getName() + " " + randomNumber);
         tvDescription.setText(user.getDescription());
-        btnFollow.setText(user.isFollowed() ? "Unfollow" : "Follow");
+        btnFollow.setText(user.getFollowed() ? "Unfollow" : "Follow");
         btnFollow.setOnClickListener(view -> {
             String msg;
-            if (!user.isFollowed()) {
+            if (!user.getFollowed()) {
                 btnFollow.setText("Unfollow");
                 msg = "Followed";
             } else {
                 btnFollow.setText("Follow");
                 msg = "Unfollowed";
             }
-            user.setFollowed(!user.isFollowed());
+            user.setFollowed(!user.getFollowed());
 
             Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
         });

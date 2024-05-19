@@ -31,6 +31,7 @@ public class User {
         this.description = description;
     }
 
+    // Getter and Setter for id
     public int getId() {
         return id;
     }
@@ -38,7 +39,9 @@ public class User {
     public void setId(int id) {
         this.id = id;
     }
-    public boolean isFollowed() {
+
+    // Getter and Setter for followed
+    public boolean getFollowed() {
         return followed;
     }
 
