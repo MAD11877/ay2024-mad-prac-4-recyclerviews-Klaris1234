@@ -13,13 +13,18 @@
         android:theme="@style/Theme.Madpractical4"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <!-- No intent filter here, as it's no longer the launcher activity -->
         </activity>
     </application>
 
